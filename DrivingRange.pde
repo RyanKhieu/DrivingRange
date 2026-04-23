@@ -32,7 +32,6 @@ float powerMeterSpeed = 0.014; // meter speed
 // arraylist of shot records for the history panel
 ArrayList<ShotRecord> shotHistory = new ArrayList<ShotRecord>();
 
-// ============================================================
 void setup() {
   size(900, 600);
   textFont(createFont("Courier New Bold", 14));
