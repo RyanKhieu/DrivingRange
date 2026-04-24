@@ -34,7 +34,6 @@ ArrayList<ShotRecord> shotHistory = new ArrayList<ShotRecord>();
 
 void setup() {
   size(900, 600);
-  textFont(createFont("Courier New Bold", 14));
   spawnBall();
 }
 
