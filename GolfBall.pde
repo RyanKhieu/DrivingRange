@@ -6,9 +6,9 @@ class GolfBall {
   boolean inFlight = false;
   boolean ballLanded = false;
   boolean landedThisFrame = false;
-  float launchStrength = 0; // 0-1, for shot record keeping
+  float launchStrength = 0; // 0-1, for shot record
 
-  // --- trail ---
+  // trail
   ArrayList<float[]> trailPoints = new ArrayList<float[]>();
 
   // physics parameters
@@ -61,7 +61,7 @@ class GolfBall {
   // returns true on the frame the ball stops
   boolean justLanded() { return landedThisFrame; }
 
-  // --- launch the ball ---
+  // launch the ball
   void shoot(float aimWorldX, float aimY, float power) {
     launchStrength = power;
     float deltaX = aimWorldX - worldX;
@@ -76,7 +76,7 @@ class GolfBall {
 
   void clearTrail() { trailPoints.clear(); }
 
-  // --- draw the trail ---
+  // draw the trail
   void drawTrail(float cameraOffset) {
     for (int i = 1; i < trailPoints.size(); i++) {
       float[] previousPoint = trailPoints.get(i - 1), currentPoint = trailPoints.get(i);
@@ -88,7 +88,7 @@ class GolfBall {
     noStroke();
   }
 
-  // trail colour (overridable by subclass)
+  // trail color
   color trailColor(float progress) {
     return color(255, 220, 80, progress * 180);
   }
